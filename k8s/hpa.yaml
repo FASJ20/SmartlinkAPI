@@ -1,0 +1,19 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: smartlink-hpa
+spec:
+  minReplicas: 1
+  maxReplicas: 7
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: smartlink-deployment
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 100
+   
