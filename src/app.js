@@ -37,7 +37,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 //  Enforce API Key for all routes
-// app.use(apiKeyAuth);
+ app.use(apiKeyAuth);
 
 // Routes
 app.use('/api', urlRoutes);
