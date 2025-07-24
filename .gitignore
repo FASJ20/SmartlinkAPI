@@ -1,3 +1,4 @@
 .env
 node_modules/
-kube-state-metrics/
+kube-state-metrics
+configmap.yaml
