@@ -1,4 +1,4 @@
 .env
 node_modules/
 kube-state-metrics
-configmap.yaml
+k8s/configmap.yaml
